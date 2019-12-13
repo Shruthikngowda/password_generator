@@ -15,13 +15,15 @@ def random_Password(password_len):
     password = ''.join(password_List)
     return password
 
-try:
-  user_input = int(input("Hi, how much length password you require?"))
-  if user_input <= 4:
-    print("password must be more than 4 characters")
-  else :
-    print ("Your Random Password is ", random_Password(user_input))
-except :
-  print("Please enter digits between 5 and 10 only")
+while True:
+  try:
+    user_input = int(input("Hi, how much length password you require?"))
+    if user_input <= 4:
+      print("password must be more than 4 characters")
+    else :
+      print ("Your Random Password is ", random_Password(user_input))
+      break
+  except :
+    print("Please enter digits between 5 and 10 only")
 
 
