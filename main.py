@@ -21,7 +21,6 @@ def random_Password(password_len):
     random.SystemRandom().shuffle(password_List)
     password = ''.join(password_List)
     return password
-
 try:
   user_input = int(input("Hi, how much length password you require?"))
   if user_input <= 4:
