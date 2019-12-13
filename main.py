@@ -1,5 +1,6 @@
 import random
 import string
+
 def random_Password(password_len):
     """Generating a random password contains uppercase,lowercase,digit and symbol """
     random_Source = string.ascii_letters + string.digits + string.punctuation
@@ -20,4 +21,14 @@ def random_Password(password_len):
     random.SystemRandom().shuffle(password_List)
     password = ''.join(password_List)
     return password
-print ("Your Random Password is ", random_Password(12))
+
+try:
+  user_input = int(input("Hi, how much length password you require?"))
+  if user_input <= 4:
+    print("password must be more than 4 characters")
+  else :
+    print ("Your Random Password is ", random_Password(user_input))
+except :
+  print("Please enter digits between 5 and 10 only")
+
+
